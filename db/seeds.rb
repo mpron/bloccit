@@ -1,14 +1,14 @@
 require 'faker'
 
 topics = []
-15.times do
+7.times do
   topics << Topic.create(
     name: Faker::Lorem.words(rand(1..10)).join(" "), 
     description: Faker::Lorem.paragraph(rand(1..4))
   )
 end
 
-rand(4..10).times do
+rand(4..7).times do
   password = Faker::Lorem.characters(10)
   u = User.new(
     name: Faker::Name.name, 
