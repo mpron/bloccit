@@ -1,0 +1,10 @@
+AWS_ACCESS_KEY_ID: ['access_key']
+AWS_SECRET_ACCESS_KEY: ['secret_access_key']
+
+development:
+  SENDGRID_USERNAME: "sendgrid_username@heroku.com"
+  SENDGRID_PASSWORD: "sendgrid_password"
+  AWS_BUCKET: redditability-development
+
+production:
+  AWS_BUCKET: redditability-production

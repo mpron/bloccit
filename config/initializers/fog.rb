@@ -2,10 +2,10 @@
 CarrierWave.configure do |config| 
   config.fog_credentials = { 
     :provider               => 'AWS', 
-    :aws_access_key_id      => ENV['AKIAI2USBLXGJJIEREQQ'], 
-    :aws_secret_access_key  => ENV['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'], 
+    :aws_access_key_id      => 'AKIAI2USBLXGJJIEREQQ', 
+    :aws_secret_access_key  => '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', 
   } 
-  config.fog_directory  = ENV['redditability-development']
+  config.fog_directory  = 'redditability-development'
   config.fog_public     = false 
 end 
 

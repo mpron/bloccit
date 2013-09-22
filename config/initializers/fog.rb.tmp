@@ -1,0 +1,10 @@
+# Adding Amazon S3 to Carrierwave
+CarrierWave.configure do |config| 
+  config.fog_credentials = { 
+    :provider               => 'AWS', 
+    :aws_access_key_id      => 'ACCESS KEY ID', 
+    :aws_secret_access_key  => 'SECRET ACCESS KEY', 
+  } 
+  config.fog_directory  = 'redditability-development'
+  config.fog_public     = false 
+end 
