@@ -17,6 +17,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :avatar
   has_many :posts
   before_create :set_member
-  mount_uploader :avatar, AvatarUploader # add this line.
+  
+  mount_uploader :avatar, AvatarUploader 
 
 end
