@@ -21,6 +21,4 @@
 public/uploads
 
 # Ignore credential files
-/config/initializers/setup_mail.rb
-/config/initializers/devise.rb
-/config/initializers/fog.rb
+config/application.yml
