@@ -1,5 +1,15 @@
 Bloccit::Application.routes.draw do
 
+  get "comments/new"
+
+  get "comments/create"
+
+  get "comments/show"
+
+  get "new/create"
+
+  get "new/show"
+
   devise_for :users
 
   resources :topics do

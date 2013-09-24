@@ -14,8 +14,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
 
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :avatar
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :avatar, :comments
   has_many :posts
+  has_many :comments
   before_create :set_member
   
   mount_uploader :avatar, AvatarUploader 
