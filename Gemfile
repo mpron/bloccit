@@ -37,6 +37,8 @@ gem 'mini_magick', '~> 3.5.0'
 gem 'fog'
 gem 'figaro'
 gem 'will_paginate', '~> 3.0'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
