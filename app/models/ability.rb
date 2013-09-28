@@ -7,8 +7,9 @@ class Ability
     # if a member, they can manage their own posts 
     # (or create new ones)
     if user.role? :member
-      can :manage, Post, :user_id => user.id
-      can :manage, Comment, :user_id => user.id
+      can :manage, Post, user_id: user.id
+      can :manage, Comment, user_id: user.id
+      can :manage, Favorite, user_id: user.id
       can :create, Vote
     end
 

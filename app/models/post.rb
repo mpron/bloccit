@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   has_many :votes, dependent: :destroy
+  has_many :favorites, dependent: :destroy
   belongs_to :user
   belongs_to :topic
   attr_accessible :body, :title, :topic, :image
@@ -30,7 +31,7 @@ class Post < ActiveRecord::Base
 
   def create_vote
     user.votes.create(value: 1, post: self)
-  end
+  end  
 
   def update_rank
     age = (self.created_at - Time.new(1970,1,1)) / 86400
