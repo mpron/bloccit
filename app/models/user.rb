@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
                   :remember_me, :name, :avatar, :comments, :provider, :uid
   has_many :posts
   has_many :comments
+  has_many :votes, dependent: :destroy
   before_create :set_member
   
   mount_uploader :avatar, AvatarUploader 
