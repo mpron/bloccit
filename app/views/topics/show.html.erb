@@ -8,7 +8,7 @@
   <div class="span8">
     <p class="lead"><%= @topic.description %></p>
     <% @posts.each do |post| %>
-      <div class="media">
+      <div class="media card">
         <%= render partial: 'votes/voter', locals: { topic: @topic, post: post } %>
         <div class="media-body">
           <h4 class="media-heading">
