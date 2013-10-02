@@ -11,7 +11,7 @@
     <p><%= image_tag(@post.image.thumb.url) if @post.image? %></p>
     <hr>
     <h2><%= @comments.count %> Comments</h2>
-    <%= render @comments %>
+    <%= render partial: 'comments/comment', collection: @comments %>
     <hr>
     <% if can? :create, Comment %>
     <h4>New Comment</h4>
