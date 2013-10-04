@@ -13,6 +13,14 @@ group :development do
   gem 'sqlite3'
 end
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'factory_girl_rails', '~> 4.0'
+end
+
+require 'rbconfig'
+gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
 
 # Gems used only for assets and not required
 # in production environments by default.
