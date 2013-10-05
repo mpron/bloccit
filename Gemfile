@@ -37,6 +37,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'newrelic_rpm'
 gem 'faker'
 gem 'devise'
 gem 'cancan'
