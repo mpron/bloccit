@@ -5,22 +5,22 @@ describe Vote do
   describe "#up_vote?" do
     it "returns true for an up vote" do
       v = Vote.new(value: 1)
-      v.up_vote?.should be_true
+      v.should be_up_vote
     end
     it "returns false for a down vote" do
       v = Vote.new(value: -1)
-      v.up_vote?.should be_false
+      v.should_not be_up_vote
     end
   end
 
   describe "#down_vote?" do
     it "returns true for a down vote" do
       v = Vote.new(value: -1)
-      v.down_vote?.should be_true
+      v.should be_down_vote
     end
     it "returns false for an up vote" do
       v = Vote.new(value: 1)
-      v.down_vote?.should be_false
+      v.should_not be_down_vote
     end
   end
   
