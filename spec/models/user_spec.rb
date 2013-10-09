@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe User do
-
+  
   describe ".top_rated" do
     before :each do
       post = nil
@@ -30,7 +30,7 @@ describe User do
 
     it "should return users based on comments + posts" do
       User.top_rated.should eq([@u1, @u0])
-    end
+    end  
     it "should have `posts_count` on user" do
       users = User.top_rated
       users.first.posts_count.should eq("1")
@@ -40,4 +40,5 @@ describe User do
       users.first.comments_count.should eq("2")
     end
   end
+
 end

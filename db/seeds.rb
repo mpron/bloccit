@@ -1,14 +1,16 @@
 require 'faker'
 
+# Create 15 topics
 topics = []
-7.times do
+15.times do
   topics << Topic.create(
     name: Faker::Lorem.words(rand(1..10)).join(" "), 
     description: Faker::Lorem.paragraph(rand(1..4))
   )
 end
+ 
 
-rand(4..7).times do
+rand(4..10).times do
   password = Faker::Lorem.characters(10)
   u = User.new(
     name: Faker::Name.name, 
@@ -18,16 +20,17 @@ rand(4..7).times do
   u.skip_confirmation!
   u.save
 
-    rand(5..12).times do
-    topic = topics.first # getting the first topic here
+  rand(5..12).times do
+    topic = topics.first
     p = u.posts.create(
+      topic: topic,
       title: Faker::Lorem.words(rand(1..10)).join(" "), 
       body: Faker::Lorem.paragraphs(rand(1..4)).join("\n"))
     # set the created_at to a time within the past year
     p.update_attribute(:created_at, Time.now - rand(600..31536000))
     p.update_rank
+
     topics.rotate!
-    end
   end
 end
 

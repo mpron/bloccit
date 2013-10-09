@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe Vote do
+
   describe "#up_vote?" do
     it "returns true for an up vote" do
       v = Vote.new(value: 1)
@@ -11,6 +12,7 @@ describe Vote do
       v.up_vote?.should be_false
     end
   end
+
   describe "#down_vote?" do
     it "returns true for a down vote" do
       v = Vote.new(value: -1)
@@ -21,6 +23,7 @@ describe Vote do
       v.down_vote?.should be_false
     end
   end
+  
   describe "#update_post" do
     it "calls `update_rank` on post" do
       post = create(:post)
